@@ -22,8 +22,8 @@ class EventRepository(private val eventDao: EventDao) {
         return eventDao.getEventById(id)
     }
 
-    fun searchEvents(query: String): Flow<List<Event>> {
-        return eventDao.searchDatabase(query)
+    suspend fun insertAllEvents(events: List<Event>) {
+        eventDao.insertAll(events)
     }
 
 }

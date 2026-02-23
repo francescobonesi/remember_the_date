@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Standard Item Sizes -->
+    <dimen name="card_margin_vertical_normal">8dp</dimen>
+    <dimen name="card_padding_vertical_normal">16dp</dimen>
+
+    <!-- Compact Item Sizes -->
+    <dimen name="card_margin_vertical_compact">2dp</dimen>
+    <dimen name="card_padding_vertical_compact">4dp</dimen>
+</resources>

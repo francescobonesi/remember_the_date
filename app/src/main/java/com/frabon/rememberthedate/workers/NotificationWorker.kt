@@ -3,12 +3,13 @@ package com.frabon.rememberthedate.workers
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
-import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import com.frabon.rememberthedate.R
 import com.frabon.rememberthedate.RememberTheDateApplication
+import com.frabon.rememberthedate.data.Event
+import com.frabon.rememberthedate.data.EventType
 import kotlinx.coroutines.flow.first
 import java.time.LocalDate
 
@@ -21,36 +22,91 @@ class NotificationWorker(
         val repository = (applicationContext as RememberTheDateApplication).repository
         val today = LocalDate.now()
         val eventsToday = repository.allEvents.first().filter {
-            it.day == today.dayOfMonth && it.month == today.monthValue
+            it.day == today.dayOfMonth && today.monthValue == it.month
         }
 
-        if (eventsToday.isNotEmpty()) {
-            sendNotification(eventsToday.map { it.name })
+        val oneWeekFromNow = LocalDate.now().plusDays(7)
+        val eventsOneWeekFromNow = repository.allEvents.first().filter {
+            it.day == oneWeekFromNow.dayOfMonth && oneWeekFromNow.monthValue == it.month
+        }
+
+        if (eventsToday.isNotEmpty() || eventsOneWeekFromNow.isNotEmpty()) {
+            sendNotification(eventsToday, eventsOneWeekFromNow)
         }
 
         return Result.success()
     }
 
-    private fun sendNotification(eventNames: List<String>) {
+    private fun sendNotification(eventsToday: List<Event>, eventsOneWeekFromNow: List<Event>) {
         val notificationManager =
             applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val channel = NotificationChannel(
-                CHANNEL_ID,
-                "Daily Reminders",
-                NotificationManager.IMPORTANCE_DEFAULT
-            )
-            notificationManager.createNotificationChannel(channel)
-        }
+        val channel = NotificationChannel(
+            CHANNEL_ID,
+            "Daily Reminders",
+            NotificationManager.IMPORTANCE_DEFAULT
+        )
+        notificationManager.createNotificationChannel(channel)
+
+        val contentText = buildNotificationString(eventsToday, eventsOneWeekFromNow)
 
         val notification = NotificationCompat.Builder(applicationContext, CHANNEL_ID)
-            .setContentTitle("Today's Events")
-            .setContentText(eventNames.joinToString(", "))
+            .setContentTitle(applicationContext.getString(R.string.notification_title))
+            .setContentText(
+                applicationContext.getString(
+                    R.string.notification_summary,
+                    eventsToday.size + eventsOneWeekFromNow.size
+                )
+            )
             .setSmallIcon(R.drawable.ic_launcher_foreground)
+            .setStyle(NotificationCompat.BigTextStyle().bigText(contentText))
             .build()
 
         notificationManager.notify(1, notification)
+    }
+
+    private fun buildNotificationString(eventsToday: List<Event>, eventsOneWeekFromNow: List<Event>): String {
+        val stringBuilder = StringBuilder()
+
+        if(eventsToday.isNotEmpty()){
+            val groupedEvents = eventsToday.groupBy { it.type }
+
+            groupedEvents[EventType.BIRTHDAY]?.let {
+                val names = it.joinToString(", ") { event -> event.name }
+                stringBuilder.append(applicationContext.getString(R.string.notification_birthdays_header) + names + "\n")
+            }
+
+            groupedEvents[EventType.ANNIVERSARY]?.let {
+                val names = it.joinToString(", ") { event -> event.name }
+                stringBuilder.append(applicationContext.getString(R.string.notification_anniversaries_header) + names + "\n")
+            }
+
+            groupedEvents[EventType.HOLIDAY]?.let {
+                val names = it.joinToString(", ") { event -> event.name }
+                stringBuilder.append(applicationContext.getString(R.string.notification_holidays_header) + names + "\n")
+            }
+        }
+
+        if(eventsOneWeekFromNow.isNotEmpty()){
+            val groupedEventsInAWeek = eventsOneWeekFromNow.groupBy { it.type }
+
+            groupedEventsInAWeek[EventType.BIRTHDAY]?.let {
+                val names = it.joinToString(", ") { event -> event.name }
+                stringBuilder.append(applicationContext.getString(R.string.notification_birthdays_in_a_week_header) + names + "\n")
+            }
+
+            groupedEventsInAWeek[EventType.ANNIVERSARY]?.let {
+                val names = it.joinToString(", ") { event -> event.name }
+                stringBuilder.append(applicationContext.getString(R.string.notification_anniversaries_in_a_week_header) + names + "\n")
+            }
+
+            groupedEventsInAWeek[EventType.HOLIDAY]?.let {
+                val names = it.joinToString(", ") { event -> event.name }
+                stringBuilder.append(applicationContext.getString(R.string.notification_holidays_in_a_week_header) + names + "\n")
+            }
+        }
+
+        return stringBuilder.toString().trim()
     }
 
     companion object {

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Dark Red Palette -->
-    <color name="red_200">#ef9a9a</color>
-    <color name="red_700">#d32f2f</color>
-    <color name="red_900">#b71c1c</color>
-    <color name="amber_500">#ffc107</color>
-    <color name="amber_700">#ffa000</color>
+    <!-- New Teal/Cyan Palette -->
+    <color name="teal_200">#80deea</color>
+    <color name="teal_700">#0097a7</color>
+    <color name="cyan_900">#006064</color>
+    <color name="orange_A200">#ffab40</color>
+    <color name="orange_A400">#ff9100</color>
 
     <!-- Standard Colors -->
     <color name="black">#FF000000</color>

@@ -28,4 +28,10 @@ interface EventDao {
     @Query("SELECT * FROM events WHERE name LIKE :searchQuery ORDER BY month, day ASC")
     fun searchDatabase(searchQuery: String): Flow<List<Event>>
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(events: List<Event>)
+
+    @Query("SELECT * FROM events ORDER BY month, day ASC")
+    fun getAllForWidget(): List<Event>
+
 }

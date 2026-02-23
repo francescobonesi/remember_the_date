@@ -1,3 +1,63 @@
 <resources>
+    <!-- App -->
     <string name="app_name">RememberTheDate</string>
+
+    <!-- Main Screen -->
+    <string name="view_style_all_months">All Months</string>
+    <string name="view_style_single_month">Single Month</string>
+    <string name="filter_all">All</string>
+    <string name="filter_birthdays">🎂</string>
+    <string name="filter_anniversaries">❤️</string>
+    <string name="filter_holidays">🎉</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_more">More</string>
+    <string name="menu_import">Import from CSV</string>
+    <string name="menu_export">Export to CSV</string>
+    <string name="export_successful">Export successful</string>
+    <string name="export_failed">Export failed</string>
+    <string name="import_successful">Import successful</string>
+    <string name="import_failed">Import failed</string>
+    <string name="default_export_filename">RememberTheDate_Export.csv</string>
+
+    <!-- Add/Edit Screen -->
+    <string name="add_edit_hint_event_name">Event Name</string>
+    <string name="add_edit_label_type">Type</string>
+    <string name="add_edit_type_birthday">Birthday</string>
+    <string name="add_edit_type_anniversary">Anniversary</string>
+    <string name="add_edit_type_holiday">Holiday</string>
+    <string name="add_edit_hint_date">Date</string>
+    <string name="add_edit_hint_year">Year (Optional)</string>
+    <string name="add_edit_button_save">Save</string>
+    <string name="add_edit_toast_validation_error">Please fill out name, type, and date.</string>
+    <string name="delete_confirmation_title">Confirm Deletion</string>
+    <string name="delete_confirmation_message">Are you sure you want to delete this event?</string>
+    <string name="delete_button">Delete</string>
+    <string name="cancel_button">Cancel</string>
+
+    <!-- Event Item Dynamic Text -->
+    <string name="event_item_turning_age">Turning %d this year</string>
+    <string name="event_item_turned_age">Turned %d this year</string>
+    <string name="event_item_age_today">%d years today!</string>
+    <string name="event_item_celebrating_years">Celebrating %d years</string>
+    <string name="event_item_celebrated_years">Celebrated %d years</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">Daily Reminders</string>
+    <string name="notification_title">Today\'s Reminders</string>
+    <string name="notification_summary">You have %d reminders today.</string>
+    <string name="notification_birthdays_header">Today\'s birthdays:\ </string>
+    <string name="notification_anniversaries_header">Today\'s anniversaries:\ </string>
+    <string name="notification_holidays_header">Also celebrating:\ </string>
+    <string name="notification_birthdays_in_a_week_header">Birthdays in exactly 7 days:\ </string>
+    <string name="notification_anniversaries_in_a_week_header">Anniversaries in exactly 7 days:\ </string>
+    <string name="notification_holidays_in_a_week_header">In exactly 7 days celebrating:\ </string>
+    <string name="permission_granted_toast">Thank you! Notifications are enabled.</string>
+    <string name="permission_denied_dialog_title">Notifications Disabled</string>
+    <string name="permission_denied_dialog_message">OK, by not enabling, you are going to miss the 8 AM notification with today\'s events. If you change your mind, open app\'s settings and enable notifications.</string>
+    <string name="permission_dialog_ok">OK</string>
+    <string name="permission_dialog_go_to_settings">Go to Settings</string>
+
+    <!-- Widget -->
+    <string name="widget_empty_text">No events today</string>
+    <string name="add_event_description">Add Event</string>
 </resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">RememberTheDate</string>
+
+    <!-- Main Screen -->
+    <string name="view_style_all_months">Tutti i Mesi</string>
+    <string name="view_style_single_month">Singolo Mese</string>
+    <string name="filter_all">Tutti</string>
+    <string name="filter_birthdays">🎂</string>
+    <string name="filter_anniversaries">❤️</string>
+    <string name="filter_holidays">🎉</string>
+    <string name="menu_search">Cerca</string>
+    <string name="menu_more">Altro</string>
+    <string name="menu_import">Importa da CSV</string>
+    <string name="menu_export">Esporta in CSV</string>
+    <string name="export_successful">Esportazione riuscita</string>
+    <string name="export_failed">Esportazione fallita</string>
+    <string name="import_successful">Importazione riuscita</string>
+    <string name="import_failed">Importazione fallita</string>
+    <string name="default_export_filename">RememberTheDate_Export.csv</string>
+
+    <!-- Add/Edit Screen -->
+    <string name="add_edit_hint_event_name">Nome Evento</string>
+    <string name="add_edit_label_type">Tipo</string>
+    <string name="add_edit_type_birthday">Compleanno</string>
+    <string name="add_edit_type_anniversary">Anniversario</string>
+    <string name="add_edit_type_holiday">Festività</string>
+    <string name="add_edit_hint_date">Data</string>
+    <string name="add_edit_hint_year">Anno (Opzionale)</string>
+    <string name="add_edit_button_save">Salva</string>
+    <string name="add_edit_toast_validation_error">Compila nome, tipo e data.</string>
+    <string name="delete_confirmation_title">Conferma Eliminazione</string>
+    <string name="delete_confirmation_message">Sei sicuro di voler eliminare questo evento?</string>
+    <string name="delete_button">Elimina</string>
+    <string name="cancel_button">Annulla</string>
+
+    <!-- Event Item Dynamic Text -->
+    <string name="event_item_turning_age">Compie %d anni quest\'anno</string>
+    <string name="event_item_turned_age">Ha compiuto %d anni quest\'anno</string>
+    <string name="event_item_age_today">%d anni oggi!</string>
+    <string name="event_item_celebrating_years">Festeggia %d anni</string>
+    <string name="event_item_celebrated_years">Festeggiati %d anni</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_name">Promemoria Giornalieri</string>
+    <string name="notification_title">Promemoria di Oggi</string>
+    <string name="notification_summary">Hai %d notifiche oggi.</string>
+    <string name="notification_birthdays_header">Compleanni di oggi:\ </string>
+    <string name="notification_anniversaries_header">Anniversari di oggi:\ </string>
+    <string name="notification_holidays_header">Festività:\ </string>
+    <string name="notification_holidays_in_a_week_header">Festività tra 7 giorni:\ </string>
+    <string name="permission_granted_toast">Grazie! Notifiche abilitate.</string>
+    <string name="permission_denied_dialog_title">Notifiche Disabilitate</string>
+    <string name="permission_denied_dialog_message">Ok, non abilitando le notifiche, non riceverai il promemoria delle 8:00. Se cambi idea, apri le impostazioni dell\'app e abilita le notifiche.</string>
+    <string name="permission_dialog_ok">OK</string>
+    <string name="permission_dialog_go_to_settings">Vai alle Impostazioni</string>
+
+    <!-- Widget -->
+    <string name="widget_empty_text">Nessun evento oggi</string>
+    <string name="add_event_description">Aggiungi evento</string>
+    <string name="notification_birthdays_in_a_week_header">"Compleanni tra 7 giorni: "</string>
+    <string name="notification_anniversaries_in_a_week_header">"Anniversari tra 7 giorni: "</string>
+</resources>

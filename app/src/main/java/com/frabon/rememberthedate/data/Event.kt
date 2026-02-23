@@ -10,5 +10,6 @@ data class Event(
     val name: String,
     val day: Int,
     val month: Int,
-    val yearOfBirth: Int? = null
+    val type: EventType,
+    val year: Int? = null
 )
