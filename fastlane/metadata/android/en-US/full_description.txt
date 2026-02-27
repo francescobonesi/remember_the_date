@@ -1,21 +1,23 @@
-Your Personal Assistant for Every Special Occasion.
+<p>Your Personal Assistant for Every Special Occasion.</p>
 
-Are you tired of scrambling for last-minute gifts or missing important birthdays and anniversaries? **Date-a-base** is the elegant and intuitive Android app designed to bring peace of mind to your busy life. Keep every special moment alive and celebrated, effortlessly.
+<p>Are you tired of scrambling for last-minute gifts or missing important birthdays and anniversaries? <b>Date-a-base</b> is the elegant and intuitive Android app designed to bring peace of mind to your busy life. Keep every special moment alive and celebrated, effortlessly.</p>
 
-## ✨ Why You'll Love Date-a-base:
+<h2>✨ Why You'll Love Date-a-base:</h2>
 
-*   **Effortless Organization:** Add birthdays, anniversaries, holidays, and any other important date with just a few taps. Keep everything neatly categorized and at your fingertips.
-*   **Smart Daily Reminders:** Wake up knowing what the day holds! Get a precise notification every morning at 6 AM, summarizing all your upcoming events. Never be caught off guard again.
-*   **Glanceable Home Screen Widget:** Your most important dates, right on your home screen. Our sleek widget updates hourly, showing you what's coming up without even opening the app.
-*   **Intuitive & Beautiful:** Enjoy a modern, user-friendly interface that makes managing your dates a joy, not a chore. Quickly filter by event type or search for specific memories.
-*   **Your Data, Your Control:** Easily export all your precious dates for safekeeping or import them back with a simple CSV file, giving you complete control over your memories.
+<ul>
+<li><b>Effortless Organization:</b> Add birthdays, anniversaries, holidays, and any other important date with just a few taps. Keep everything neatly categorized and at your fingertips.</li>
+<li><b>Smart Daily Reminders:</b> Wake up knowing what the day holds! Get a precise notification every morning at 6 AM, summarizing all your upcoming events. Never be caught off guard again.</li>
+<li><b>Glanceable Home Screen Widget:</b> Your most important dates, right on your home screen. Our sleek widget updates hourly, showing you what's coming up without even opening the app.</li>
+<li><b>Intuitive & Beautiful:</b> Enjoy a modern, user-friendly interface that makes managing your dates a joy, not a chore. Quickly filter by event type or search for specific memories.</li>
+<li><b>Your Data, Your Control:</b> Easily export all your precious dates for safekeeping or import them back with a simple CSV file, giving you complete control over your memories.</li>
+</ul>
 
-**Date-a-base** is more than just a calendar; it's your dedicated partner in celebrating life's precious moments. Built with the latest Android technology, it's reliable, secure, and a delight to use.
+<p><b>Date-a-base</b> is more than just a calendar; it's your dedicated partner in celebrating life's precious moments. Built with the latest Android technology, it's reliable, secure, and a delight to use.</p>
 
----
+<hr>
 
-Support Independent Development:
+<p>Support Independent Development:</p>
 
-If you love Date-a-base and wish to support its continued development, please consider a donation. Your generosity helps keep this app free and open-source!
+<p>If you love Date-a-base and wish to support its continued development, please consider a donation. Your generosity helps keep this app free and open-source!</p>
 
-[Buy me a coffee](https://paypal.me/frabon0)
+<p><a href="https://paypal.me/frabon0">Buy me a coffee</a></p>
